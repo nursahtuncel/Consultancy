@@ -3,18 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
-li{
+li {
     list-style: none;
 }
-button{
-    border: none;
+input, button, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
     background: none;
-    cursor: pointer;
-}
-input,textarea,select{
+    border: none;
     outline: none;
 }
