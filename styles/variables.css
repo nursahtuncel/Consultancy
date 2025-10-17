@@ -6,13 +6,22 @@
   --black-color: rgba(0, 0, 0, 1);
 
   /* Font Variables */
-  --font-family: "Helvetica Neue", sans-serif;
-  --font-size-base: 16px;
-  --font-size-large: 24px;
-  --font-size-small: 12px;
+  --primary-font: "Inter", "sans-serif";
+  --secondary-font: "Plus Jakarta Sans", "sans-serif";
 
-  /* Spacing Variables */
-  --spacing-small: 8px;
-  --spacing-medium: 16px;
-  --spacing-large: 32px;
+  /* Font Sizes */
+  --font-size-logo: 25px;
+
+  --font-size-large: 24px;
+  --font-size-large-content: 20px;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-xsmall: 12px;
+
+  --font-size-large-header: 50px;
+  --font-size-white-header: 40px;
+  --font-size-header: 36px;
+  --font-size-medium-header: 32px;
+  --font-size-small-header: 22px;
+  --font-size-primary-header: 18px;
 }
