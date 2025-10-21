@@ -1,3 +1,78 @@
 @import "../styles/index.css";
 
 /* css kodlarınız buraya gelecek */
+.why-us-section {
+  display: grid;
+  gap: 40px;
+  max-width: 1025px;
+  margin: auto;
+}
+.why-us-header {
+  gap: 21px;
+  display: grid;
+  text-align: center;
+  margin: auto;
+  max-width: 720px;
+}
+.whyUs-alt-baslik {
+  color: var(--green-color);
+  font-size: var(--font-size-primary-header);
+  font-weight: 500;
+}
+.whyUs-ana-baslik {
+  color: var(--black-color);
+  font-size: var(--font-size-medium-header);
+  font-weight: 600;
+}
+.whyUs-aciklama {
+  color: var(--gray-color);
+  font-size: var(--font-size-primary-header);
+  line-height: 30px;
+}
+
+.whyUs-alt-baslik,.whyUs-aciklama,.whyUs-stat-text{
+    font-family: var(--primary-font);
+}
+.whyUs-ana-baslik,.whyUs-stat-value{
+    font-family: var(--secondary-font);
+}
+
+.whyUs-stats-container {
+  display: flex;
+  gap: 160px;
+}
+
+.whyUs-stat-item {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+.whyUs-stat-value {
+  color: var(--green-color);
+  font-weight: 700;
+  font-size: var(--font-size-stats);
+}
+.whyUs-stat-text {
+  color: var(--gray-color);
+  font-size: var(--font-size-primary-header);
+}
+
+@media (max-width: 1024px) {
+  .why-us-section {
+    padding: 0 24px;
+  }
+  .whyUs-stats-container {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 720px) {
+  .why-us-section {
+    padding: 0 24px;
+  }
+  .whyUs-stats-container {
+    justify-content: center;
+    display: grid;
+    gap: 20px;
+  }
+}
