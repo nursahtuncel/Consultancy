@@ -1,11 +1,6 @@
-//   <!-- can-oc-12-13-why us section start -->
-
-// Başlık Kısmı Başlangıç
-
 const whyusSection = document.getElementById("why-us-section");
 const whyusHeader = document.getElementById("why-us-header");
 const whyUsContent = document.getElementById("why-us-content");
-
 
 // 'veri.json' dosyasını çek
 fetch("../../db.json")
@@ -18,66 +13,49 @@ fetch("../../db.json")
   .then((data) => {
     // 'data' artık bizim güncel JSON nesnemiz
 
-    // === BÖLÜM 1: Metin İçeriğini Yükle ===
-    // JSON'daki 'why-us-textContent' objesine erişiyoruz
+    // === BÖLÜM 1: Metin İçeriğini Yükle (innerHTML ile) ===
     const textContent = data["why-us-textContent"];
 
-    // Ana Div Oluşturuldu
-    const anaKapsayici = document.createElement("div");
-    anaKapsayici.className = "whyUs-header";
-    //Alt Başlık Oluşturuldu
-    const altBaslik = document.createElement("p");
-    altBaslik.textContent = textContent.eyebrow; // <-- Değişti
-    altBaslik.className = "whyUs-alt-baslik";
+    // 1. Başlık bölümünün HTML'ini bir metin olarak hazırla
+    // Not: Orijinal kodunda 'anaKapsayici' oluşturuluyor ama içi boş
+    // ve diğerleri 'whyusHeader'a kardeş olarak ekleniyor.
+    // Aynı yapıyı korumak için böyle yazıyoruz:
+    const headerHTML = `
+      <div class="whyUs-header"></div>
+      <p class="whyUs-alt-baslik">${textContent.eyebrow}</p>
+      <h2 class="whyUs-ana-baslik">${textContent.heading}</h2>
+      <p class="whyUs-aciklama">${textContent.description}</p>
+    `;
 
-    //Ana Başlık Oluşturuldu
-    const anaBaslik = document.createElement("h2");
-    anaBaslik.textContent = textContent.heading; // <-- Değişti
-    anaBaslik.className = "whyUs-ana-baslik";
+    // 2. Hazırlanan HTML'i doğrudan ata
+    whyusHeader.innerHTML = headerHTML;
 
-    //Açıklama Oluşturuldu
-    const aciklama = document.createElement("p");
-    aciklama.textContent = textContent.description; // <-- Değişti
-    aciklama.className = "whyUs-aciklama";
+    // === BÖLÜM 2: İstatistikleri Yükle (innerHTML ile) ===
 
-    // Metinleri ana kutuya ekle
-    whyusHeader.appendChild(anaKapsayici);
-    whyusHeader.appendChild(altBaslik);
-    whyusHeader.appendChild(anaBaslik);
-    whyusHeader.appendChild(aciklama);
+    // 1. 'data.whyUsData' dizisindeki her bir elemanı
+    //    bir HTML metnine dönüştürmek için 'map()' kullan.
+    const statsItemsHTML = data.whyUsData
+      .map((item) => {
+        // Her bir item için bu HTML şablonunu döndür
+        return `
+        <div class="whyUs-stat-item">
+          <p class="whyUs-stat-value">${item.value}</p>
+          <p class="whyUs-stat-text">${item.text}</p>
+        </div>
+      `;
+      })
+      .join(""); // 'map()' bir dizi (array) döndürür, 'join("")'
+    // bu dizideki tüm metinleri birleştirir.
 
-    // === BÖLÜM 2: İstatistikleri Yükle ===
+    // 2. İstatistik kutularını da ana kapsayıcısının içine yerleştir
+    const contentHTML = `
+      <div class="whyUs-stats-container">
+        ${statsItemsHTML}
+      </div>
+    `;
 
-    // 1. İstatistikler için bir ana kapsayıcı (container) oluştur
-    const statsContainer = document.createElement("div");
-    statsContainer.className = "whyUs-stats-container";
-
-    // 2. JSON'daki 'whyUsData' dizisi (array) içinde dön
-    //    Dizideki her bir eleman için (item) bu fonksiyonu çalıştır
-    data.whyUsData.forEach((item) => {
-      // Her bir istatistik için (1200, 20, 55...) bir kutu oluştur
-      const statItem = document.createElement("div");
-      statItem.className = "whyUs-stat-item";
-
-      // Değer için (1200) bir eleman oluştur
-      const statValue = document.createElement("p");
-      statValue.textContent = item.value;
-      statValue.className = "whyUs-stat-value";
-
-      // Metin için (Projects Completed) bir eleman oluştur
-      const statText = document.createElement("p");
-      statText.textContent = item.text;
-      statText.className = "whyUs-stat-text";
-
-      // Değeri ve metni istatistik kutusuna ekle
-      statItem.appendChild(statValue);
-      statItem.appendChild(statText);
-
-      // Hazırlanan istatistik kutusunu ana kapsayıcıya ekle
-      statsContainer.appendChild(statItem);
-    });
-
-    whyUsContent.appendChild(statsContainer);
+    // 3. Hazırlanan son HTML'i doğrudan ata
+    whyUsContent.innerHTML = contentHTML;
   })
   .catch((error) => {
     // Bir hata olursa yakala
