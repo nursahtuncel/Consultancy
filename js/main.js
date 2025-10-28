@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", async () => {
   // tüm sayfalar için gerekli kodlar buraya gelecek
-
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
   if (window.location.pathname.includes("home")) {
     // home sayfasında render olacak kodlar buraya gelecek
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
   } else if (window.location.pathname.includes("login")) {
     // login sayfasında render olacak kodlar buraya gelecek
   } else if (window.location.pathname.includes("pricing")) {
