@@ -4,7 +4,7 @@
     "heading": "We Have A Lot of Experience in Work",
     "description": "UpConsit as a leading business consulting place, we have helped many small to medium and large companies to help their business"
   },
-  "whyUsData": [
+  "why-us-stats": [
     { "id": 1, "value": 1200, "text": "Projects Completed" },
     { "id": 2, "value": 20, "text": "Year of Experience" },
     { "id": 3, "value": 55, "text": "New Brand" },

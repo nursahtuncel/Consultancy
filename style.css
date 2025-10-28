@@ -3,76 +3,68 @@
 /* css kodlarınız buraya gelecek */
 .why-us-section {
   display: grid;
+  justify-content: center;
   gap: 40px;
-  max-width: 1025px;
-  margin: auto;
 }
 .why-us-header {
-  gap: 21px;
   display: grid;
   text-align: center;
+  gap: 20px;
+  padding: 30px;
   margin: auto;
   max-width: 720px;
 }
-.whyUs-alt-baslik {
+.why-us-top-header {
   color: var(--green-color);
-  font-size: var(--font-size-primary-header);
   font-weight: 500;
+  font-size: var(--font-size-primary-header);
+  font-family: var(--primary-font);
 }
-.whyUs-ana-baslik {
+.why-us-bottom-header {
   color: var(--black-color);
-  font-size: var(--font-size-medium-header);
   font-weight: 600;
+  font-size: var(--font-size-medium-header);
 }
-.whyUs-aciklama {
+.why-us-text {
+  font-weight: 400;
   color: var(--gray-color);
   font-size: var(--font-size-primary-header);
-  line-height: 30px;
 }
-
-.whyUs-alt-baslik,.whyUs-aciklama,.whyUs-stat-text{
-    font-family: var(--primary-font);
-}
-.whyUs-ana-baslik,.whyUs-stat-value{
-    font-family: var(--secondary-font);
-}
-
-.whyUs-stats-container {
+.why-us-content {
+  padding: 30px;
   display: flex;
   gap: 160px;
-}
-
-.whyUs-stat-item {
-  display: grid;
-  gap: 10px;
+  justify-content: center;
   text-align: center;
 }
-.whyUs-stat-value {
-  color: var(--green-color);
-  font-weight: 700;
-  font-size: var(--font-size-stats);
+.stat-item {
+  display: grid;
+  gap: 10px;
 }
-.whyUs-stat-text {
-  color: var(--gray-color);
+.stat-value {
+  color: var(--green-color);
+  font-size: var(--font-size-stats);
+  font-weight: 700;
+}
+.stat-text {
+  font-weight: 400;
   font-size: var(--font-size-primary-header);
+  color: var(--gray-color);
+  font-family: var(--primary-font);
 }
 
 @media (max-width: 1024px) {
-  .why-us-section {
-    padding: 0 24px;
+  .why-us-content {
+    gap: 20px;
   }
-  .whyUs-stats-container {
+  .why-us-section {
     gap: 0;
-    justify-content: space-between;
   }
 }
-@media (max-width: 720px) {
-  .why-us-section {
-    padding: 0 24px;
-  }
-  .whyUs-stats-container {
-    justify-content: center;
+
+@media (max-width: 420px) {
+  .why-us-content {
     display: grid;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
