@@ -2,24 +2,27 @@
 
 /* css kodlarınız buraya gelecek */
 /* miray -OC-16-17 - Implement the More Features Section start */
+@import url("./styles/index.css");
 
-.container {
+/* miray -OC-16-17 - Implement the More Features Section start */
+
+.m-container {
   display: flex;
   flex-wrap: wrap;
   width: 1181px;
   height: 556px;
   margin: 50px auto;
-  background-color: #fff;
+  background-color: var(--white-color);
   overflow: hidden;
 }
 
-.left,
-.right {
+.m-left,
+.m-right {
   flex: 1 1 50%;
   box-sizing: border-box;
 }
 
-.left img {
+.m-left img {
   width: 554px;
   height: 556px;
   display: block;
@@ -29,7 +32,7 @@
   object-fit: cover;
 }
 
-.right {
+.m-right {
   width: 553px;
   height: 226px;
   padding: 40px;
@@ -39,76 +42,84 @@
   justify-content: center;
 }
 
-.right h2 {
+.m-right h2 {
   width: 124px;
   height: 22px;
   opacity: 1;
   transform: rotate(0deg);
-  color: rgba(38, 187, 116, 1);
-  font-size: 18px;
+  color: var(--yellow-color);
+  font-family: var(--primary-font);
+  font-size: var(--font-size-medium);
   font-weight: 500;
   margin-bottom: 25px;
 }
 
-.right h3 {
+.m-right h3 {
   max-width: 360px;
   margin-bottom: 20px;
-  color: black;
+  color: var(--black-color);
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-medium-header);
 }
 
-.right p {
+.m-right p {
   max-width: 480px;
-  color: #666;
+  color: var(--gray-color);
+  font-family: var(--primary-font);
+  font-size: var(--font-size-medium);
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-.right button {
+.m-right button {
   padding: 12px 24px;
   background-color: rgba(38, 187, 116, 1);
   width: 146px;
   height: 49px;
-  color: white;
+  color: var(--white-color);
+  font-family: var(--primary-font);
+  font-size: var(--font-size-base);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
 }
 
-.right button:hover {
+.m-right button:hover {
   opacity: 0.8;
 }
 
 /* responsive */
 @media (max-width: 768px) {
-  .container {
+  .m-container {
     flex-direction: column;
   }
 
-  .left,
-  .right {
+  .m-left,
+  .m-right {
     flex: 1 1 100%;
   }
 
-  .right {
+  .m-right {
     padding: 20px;
+    margin-top: 60px;
   }
 
-  .right h2 {
+  .m-right h2 {
     font-size: 22px;
   }
 
-  .right h3 {
+  .m-right h3 {
     font-size: 18px;
   }
 
-  .right p {
+  .m-right p {
     font-size: 16px;
   }
 
-  .right button {
+  .m-right button {
     font-size: 15px;
     padding: 10px 20px;
   }
 }
+
 /* miray -OC-16-17 - Implement the More Features Section end */
