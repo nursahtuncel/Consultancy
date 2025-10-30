@@ -40,4 +40,8 @@ const createWhyUsSection = () => {
   renderWhyUs();
 };
 
-export { createWhyUsSection };
+const createFeaturesSection = () => {
+  
+};
+
+export { createWhyUsSection ,createFeaturesSection};
