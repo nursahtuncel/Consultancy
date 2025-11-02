@@ -3,6 +3,13 @@
 
 /* css kodlarınız buraya gelecek */
 
+/* Genel: Beklenmeyen yatay kaydırmayı engelle */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 /* can-why-us-section start */
 .why-us-section {
   display: grid;
@@ -170,3 +177,189 @@
   }
 }
 /* <!-- Can-oc-4-implement-navbar End --> */
+
+/* <!-- Can-oc-26-29-implement-Login-signUp Start --> */
+.form {
+  display: flex;
+}
+.form-title {
+  font-size: var(--font-size-header);
+  color: var(--green-color);
+  font-weight: 800;
+}
+.form-image {
+  width: 70%;
+  min-height: 100vh;
+}
+.form-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.form-container {
+  display: grid;
+  align-items: center;
+  width: 30%;
+  padding: 40px;
+}
+#formContent {
+  display: grid;
+  gap: 24px;
+}
+#signup-form {
+  display: grid;
+  gap: 24px;
+}
+.field {
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: var(--font-size-small);
+  background-color: #eeeeee;
+}
+.password-wrapper input {
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #eeeeee;
+  width: 100%;
+  font-size: var(--font-size-small);
+}
+.password-toggle-icon {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+.password-wrapper {
+  position: relative;
+}
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xsmall);
+  align-items: center;
+}
+.form-options label {
+  display: flex;
+  align-items: center;
+  font-family: var(--third-font);
+  gap: 5px;
+}
+.forgot-link {
+  color: var(--green-color);
+  font-family: var(--primary-font);
+}
+.submit-btn {
+  background-color: var(--green-color);
+  border: none;
+  color: var(--white-color);
+  padding: 10px 20px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+}
+.google-btn {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  color: var(--white-color);
+  font-size: var(--font-size-xsmall);
+  background-color: rgba(51, 51, 51, 1);
+  font-family: var(--primary-font);
+  border: none;
+}
+.toggle-link-container {
+  font-size: var(--font-size-xsmall);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.toggle-link {
+  color: var(--green-color);
+}
+#login-form {
+  display: grid;
+  gap: 24px;
+}
+/* Switch butonunun dış kapsayıcısı */
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Genişlik */
+  height: 20px; /* Yükseklik */
+}
+
+/* Arka plan */
+.switch-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Kapalı durumdaki renk */
+  transition: 0.4s;
+  border-radius: 34px; /* Yuvarlak kenarlar */
+}
+
+/* Yuvarlak buton (handle) */
+.switch-label::before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Buton yüksekliği */
+  width: 16px; /* Buton genişliği */
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%; /* Tamamen yuvarlak */
+}
+
+/* Gizli checkbox */
+.switch-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Checkbox seçildiğinde (açık olduğunda) yapılacaklar */
+.switch-checkbox:checked + .switch-label {
+  background-color: #2196f3; /* Açık durumdaki renk (mavi) */
+}
+
+.switch-checkbox:checked + .switch-label::before {
+  /* Yuvarlak butonu sağa kaydır */
+  transform: translateX(26px);
+}
+
+/* Durum metni için stil */
+#durum-metni {
+  display: flex;
+  gap: 8px;
+}
+@media (max-width: 900px) {
+  .form-container {
+    gap: 20px;
+  }
+  .form {
+    display: grid;
+  }
+  .form-image {
+    width: 100%;
+    display: none;
+  }
+  .form-container {
+    width: 100%;
+  }
+  html,
+  body {
+    overflow-y: auto;
+  }
+  #form-logo,
+  .form-title {
+    text-align: center;
+  }
+}
+/* <!-- Can-oc-26-29-implement-Login-signUp End --> */
