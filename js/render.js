@@ -96,5 +96,46 @@ const createLoginSignUpForm = async (formType) => {
     location.href = `./../${link.dataset.target}/index.html`;
   });
 };
+const contactSectionLocalStorage = () => {
+  const nameInput = document.getElementById("contact-input-name");
+  const emailInput = document.getElementById("contact-input-email");
+  const messageInput = document.getElementById("contact-message");
+  const saveButton = document.getElementById("contact-button");
 
-export { createWhyUsSection, createLoginSignUpForm };
+  saveButton.addEventListener("click", function () {
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const message = messageInput.value;
+
+    const formData = {
+      userName: name,
+      userEmail: email,
+      userMessage: message,
+    };
+
+    const formDataString = JSON.stringify(formData);
+
+    localStorage.setItem("contactData", formDataString);
+
+    alert("Mesajınız yerel olarak kaydedildi!");
+
+    nameInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
+  });
+};
+const createHamburgerButton = () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+};
+
+
+export {
+  createWhyUsSection,
+  createLoginSignUpForm,
+  contactSectionLocalStorage,
+  createHamburgerButton,
+};

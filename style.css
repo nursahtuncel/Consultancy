@@ -8,6 +8,9 @@
   justify-content: center;
   gap: 40px;
 }
+.nav-link.active {
+  color: var(--green-color);
+}
 .why-us-header {
   display: grid;
   text-align: center;
@@ -358,3 +361,91 @@
   }
 }
 /* <!-- Can-oc-26-29-implement-Login-signUp End --> */
+
+/* <!-- OC-32-implement-Contact Section Start --> */
+.contact-container {
+  gap: 60px;
+  display: grid;
+}
+.contact-header {
+  text-align: center;
+  display: grid;
+  gap: 20px;
+}
+.contact-top-title {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  color: var(--green-color);
+  font-size: var(--font-size-primary-header);
+}
+.contact-main-title {
+  font-weight: 600;
+  color: var(--black-color);
+  font-size: var(--font-size-medium-header);
+}
+.contact-content {
+  display: grid;
+  text-align: center;
+  width: 100%;
+}
+.contact-content-container {
+  display: grid;
+  gap: 40px;
+  width: 100%;
+}
+.contact-content-text input {
+  width: 49%;
+}
+.contact-section {
+  padding: 40px 93px;
+}
+.contact-content-text input {
+  width: 49%;
+  font-family: var(--primary-font);
+  border: 1px solid rgba(202, 202, 202, 1);
+  padding: 10px;
+  border-radius: 8px;
+}
+.contact-content-text {
+  gap: 40px;
+  display: flex;
+}
+.contact-content-message {
+  width: 100%;
+}
+.contact-content-message textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(202, 202, 202, 1);
+  padding: 10px;
+  font-family: var(--primary-font);
+  height: 150px;
+}
+.contact-button {
+  border-radius: 8px;
+  color: var(--white-color);
+  background-color: var(--green-color);
+  padding: 15px 28px;
+  border: none;
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  .contact-content-text {
+    display: grid;
+    gap: 20px;
+  }
+  .contact-content-text input {
+    width: 100%;
+  }
+  .contact-section {
+    padding: 24px;
+  }
+  .contact-button {
+    width: 100%;
+  }
+  .contact-content-container {
+    gap: 20px;
+  }
+}
+/* <!-- OC-32-implement-Contact Section End --> */
