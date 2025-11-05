@@ -56,5 +56,7 @@ const createFeaturesSection = async (data) => {
     })
     .join("");
 };
-
+const createStructureCard = () => {
+  const structureSection = document.querySelector(".structure-content");
+};
 export { createWhyUsSection, createFeaturesSection };

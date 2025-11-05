@@ -311,13 +311,42 @@ section {
   border-radius: 8px;
 }
 @media (max-width: 900px) {
-  .hero-content h1{
+  .hero-content h1 {
     padding-right: 0%;
-  }.email-content{
+  }
+  .email-content {
     display: grid;
   }
-  .email-content input{
+  .email-content input {
     width: 100%;
   }
 }
 /* <!-- Can-oc-6-implement-Hero Section End --> */
+
+/* <!-- Can-oc-8-Create a Structure for Services Card Start --> */
+.structure-header {
+  max-width: 500px;
+  display: grid;
+  gap: 20px;
+}
+.structure-header h6 {
+  font-size: var(--font-size-primary-header);
+  color: var(--green-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
+}
+.structure-header h2 {
+  font-weight: 600;
+  font-size: var(--font-size-medium-header);
+  color: var(--black-color);
+}
+.structure-container {
+  display: grid;
+  gap: 40px;
+}
+.structure-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kutu */
+  gap: 20px;
+}
+/* <!-- Can-oc-8-Create a Structure for Services Card End --> */
