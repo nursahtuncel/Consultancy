@@ -39,6 +39,38 @@ const createWhyUsSection = () => {
 
   renderWhyUs();
 };
+
+const createFeaturesSection = async (data) => {
+  const featuresContentLeft = document.querySelector(".features-content-left");
+  featuresContentLeft.innerHTML = data
+    .map((item) => {
+      return `
+         <div class="features-content-header">
+              <div class="features-content-image"><img src="${item.imgUrl}" alt="" /></div>
+              <div class="features-content-content">
+                <h4 class="features-content-content-header">${item.header}</h4>
+                <p class="features-content-paragraph">${item.paragraph}</p>
+              </div>
+         </div>
+        `;
+    })
+    .join("");
+};
+const createStructureCard = async (dataServices) => {
+  const structureSection = document.querySelector(".structure-content");
+
+  structureSection.innerHTML = dataServices
+    .map((item) => {
+      return `    
+            <div class="structure-card">
+              <img src="${item.image}" alt="">
+              <h2>${item.title}</h2>
+              <p>${item.text}</p>
+            </div>
+    `;
+    })
+    .join("");
+};
 const createLoginSignUpForm = async (formType) => {
   const formContent = document.getElementById("formContent");
   const config = await fetchData(formType);
@@ -133,9 +165,4 @@ const createHamburgerButton = () => {
 };
 
 
-export {
-  createWhyUsSection,
-  createLoginSignUpForm,
-  contactSectionLocalStorage,
-  createHamburgerButton,
-};
+export { createWhyUsSection, createFeaturesSection, createStructureCard,createHamburgerButton,createLoginSignUpForm,contactSectionLocalStorage };
