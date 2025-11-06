@@ -10,6 +10,14 @@ import {
 } from "./render.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+  // get-started adında ki buton tıklanınca alert
+  const button = document.querySelector(".m-right button");
+
+  if (button) {
+    button.addEventListener("click", () => {
+      alert("Buton Tıklandı");
+    });
+  }
   if (window.location.pathname.includes("home")) {
     const data = await fetchData("feature-section");
     const dataServices = await fetchData("services-card");
