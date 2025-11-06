@@ -67,5 +67,41 @@
       "title": "Open for feedback and review",
       "text": "If you are a business owner looking to improve the quality and efficiency of the production process, operations consultants can be the right choice to help you find new."
     }
-  ]
+  ],
+  "login": {
+    "title": "Log in",
+    "fields": [
+      {
+        "type": "email",
+        "placeholder": "Email or phone number",
+        "name": "email"
+      }
+    ],
+    "passwordField": {
+      "type": "password",
+      "placeholder": "Enter password",
+      "name": "password"
+    },
+    "submitText": "Login",
+    "toggleText": "Don't have an account? ",
+    "toggleLinkText": "Sign up",
+    "toggleTarget": "signup"
+  },
+  "signup": {
+    "title": "Sign up",
+    "fields": [
+      { "type": "text", "placeholder": "Name", "name": "name" },
+      { "type": "text", "placeholder": "Phone number", "name": "phone" },
+      { "type": "email", "placeholder": "Email", "name": "email" }
+    ],
+    "passwordField": {
+      "type": "password",
+      "placeholder": "Enter password",
+      "name": "password"
+    },
+    "submitText": "Sign in",
+    "toggleText": "Already have an account? ",
+    "toggleLinkText": "Sign in",
+    "toggleTarget": "login"
+  }
 }

@@ -71,4 +71,98 @@ const createStructureCard = async (dataServices) => {
     })
     .join("");
 };
-export { createWhyUsSection, createFeaturesSection, createStructureCard };
+const createLoginSignUpForm = async (formType) => {
+  const formContent = document.getElementById("formContent");
+  const config = await fetchData(formType);
+
+  const fieldsHTML = (config.fields || [])
+    .map(
+      (field) =>
+        `<input class="field" type="${field.type}" placeholder="${field.placeholder}" name="${field.name}" />`
+    )
+    .join("");
+
+  formContent.innerHTML = `
+    <h2 class="form-title">${config.title}</h2>
+
+    <form id="${formType}-form">
+      ${fieldsHTML}
+
+      <div class="password-wrapper">
+        <input type="${config.passwordField.type}" placeholder="${config.passwordField.placeholder}" name="${config.passwordField.name}" />
+        <button type="button" class="password-toggle-icon" id="togglePassword" aria-label="Toggle password">
+          <img src="/images/login-signup-images/eye-vector-consulty.svg" alt="">
+        </button>
+      </div>
+
+      <div class="form-options">
+        <label class="remember-me">
+          <span class="switch-container">
+            <input type="checkbox" class="switch-checkbox" id="benimSwitch">
+            <span class="switch-label"></span>
+          </span>
+          <p id="durum-metni">Remember Me</p>
+        </label>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="submit-btn">${config.submitText}</button>
+    </form>
+
+    <button class="google-btn">
+      <img src="/images/login-signup-images/google-icon.svg" alt="">
+      Or ${config.submitText} with Google
+    </button>
+
+    <div class="toggle-link-container">
+      ${config.toggleText}
+      <a href="#" class="toggle-link" data-target="${config.toggleTarget}">${config.toggleLinkText}</a>
+    </div>
+  `;
+
+  // tek bir delegation ile toggle-link yönlendirmesi
+  formContent.addEventListener("click", (e) => {
+    const link = e.target.closest(".toggle-link");
+    if (!link) return;
+    e.preventDefault();
+    location.href = `./../${link.dataset.target}/index.html`;
+  });
+};
+const contactSectionLocalStorage = () => {
+  const nameInput = document.getElementById("contact-input-name");
+  const emailInput = document.getElementById("contact-input-email");
+  const messageInput = document.getElementById("contact-message");
+  const saveButton = document.getElementById("contact-button");
+
+  saveButton.addEventListener("click", function () {
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const message = messageInput.value;
+
+    const formData = {
+      userName: name,
+      userEmail: email,
+      userMessage: message,
+    };
+
+    const formDataString = JSON.stringify(formData);
+
+    localStorage.setItem("contactData", formDataString);
+
+    alert("Mesajınız yerel olarak kaydedildi!");
+
+    nameInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
+  });
+};
+const createHamburgerButton = () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+};
+
+
+export { createWhyUsSection, createFeaturesSection, createStructureCard,createHamburgerButton,createLoginSignUpForm,contactSectionLocalStorage };
