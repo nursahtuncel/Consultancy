@@ -1,16 +1,107 @@
-
 {
-  "users": [
-    { "id": 1, "name": "Alice" },
-    { "id": 2, "name": "Bob" },
-    { "id": 3, "name": "Charlie" }
+  "why-us-textContent": {
+    "eyebrow": "Why Us?",
+    "heading": "We Have A Lot of Experience in Work",
+    "description": "UpConsit as a leading business consulting place, we have helped many small to medium and large companies to help their business"
+  },
+  "why-us-stats": [
+    { "id": 1, "value": 1200, "text": "Projects Completed" },
+    { "id": 2, "value": 20, "text": "Year of Experience" },
+    { "id": 3, "value": 55, "text": "New Brand" },
+    { "id": 4, "value": 14, "text": "Awards Won" }
   ],
-  "posts": [
-    { "id": 1, "title": "First Post", "content": "This is the first post." },
-    { "id": 2, "title": "Second Post", "content": "This is the second post." }
+  "feature-section": [
+    {
+      "id": 1,
+      "imgUrl": "/images/features-images/bx-support.svg",
+      "header": "Directly guided by professionals",
+      "paragraph": "General advice on professional practice in conference interpreting, with the aim of."
+    },
+    {
+      "id": 2,
+      "imgUrl": "/images/features-images/camera.svg",
+      "header": "Monitor business changes",
+      "paragraph": "For assessing your change management success. It ease recording and assessing data."
+    },
+    {
+      "id": 3,
+      "imgUrl": "/images/features-images/ring.svg",
+      "header": "Full consultation",
+      "paragraph": "Consultees can take advantage of the full consultation period to prepare considered."
+    }
   ],
-  "comments": [
-    { "id": 1, "content": "First Comment" },
-    { "id": 2, "content": "Second Comment" }
-  ]
+  "services-card": [
+    {
+      "id": 1,
+      "image": "/images/structure-images/bx-time.svg",
+      "title": "Fast workmanship, precise consultation",
+      "text": "If you are a business owner looking to improve the quality and efficiency of the production process, operations consultants can be the right choice to help you find new."
+    },
+    {
+      "id": 2,
+      "image": "/images/structure-images/bx-dollar.svg",
+      "title": "Lower prices with lots of variety",
+      "text": "If you are a business owner looking to improve the quality and efficiency of the production process, operations consultants can be the right choice to help you find new."
+    },
+    {
+      "id": 3,
+      "image": "/images/structure-images/bx-objects-vertical-bottom.svg",
+      "title": "Detailed analysis of sales graph data",
+      "text": "If you are a business owner looking to improve the quality and efficiency of the production process, operations consultants can be the right choice to help you find new."
+    },
+    {
+      "id": 4,
+      "image": "/images/structure-images/bx-shape-triangle.svg",
+      "title": "Management and strategy consultant",
+      "text": "If you are a business owner looking to improve the quality and efficiency of the production process, operations consultants can be the right choice to help you find new."
+    },
+    {
+      "id": 5,
+      "image": "/images/structure-images/bx-comment-detail.svg",
+      "title": "Communicative with ease of discussion",
+      "text": "If you are a business owner looking to improve the quality and efficiency of the production process, operations consultants can be the right choice to help you find new."
+    },
+    {
+      "id": 6,
+      "image": "/images/structure-images/bx-happy.svg",
+      "title": "Open for feedback and review",
+      "text": "If you are a business owner looking to improve the quality and efficiency of the production process, operations consultants can be the right choice to help you find new."
+    }
+  ],
+  "login": {
+    "title": "Log in",
+    "fields": [
+      {
+        "type": "email",
+        "placeholder": "Email or phone number",
+        "name": "email"
+      }
+    ],
+    "passwordField": {
+      "type": "password",
+      "placeholder": "Enter password",
+      "name": "password"
+    },
+    "submitText": "Login",
+    "toggleText": "Don't have an account? ",
+    "toggleLinkText": "Sign up",
+    "toggleTarget": "signup"
+  },
+  "signup": {
+    "title": "Sign up",
+    "fields": [
+      { "type": "text", "placeholder": "Name", "name": "name" },
+      { "type": "text", "placeholder": "Phone number", "name": "phone" },
+      { "type": "email", "placeholder": "Email", "name": "email" }
+    ],
+    "passwordField": {
+      "type": "password",
+      "placeholder": "Enter password",
+      "name": "password"
+    },
+    "submitText": "Sign in",
+    "toggleText": "Already have an account? ",
+    "toggleLinkText": "Sign in",
+    "toggleTarget": "login"
+  }
 }

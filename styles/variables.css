@@ -1,17 +1,19 @@
 :root {
   /* Color Variables */
-  --yellow-color: rgba(38, 187, 116, 1);
+  --green-color: rgba(38, 187, 116, 1);
   --white-color: rgba(255, 255, 255, 1);
-  --gray-color: rgba(192, 192, 192, 1);
+  --gray-color: rgba(108, 117, 125, 1);
   --black-color: rgba(0, 0, 0, 1);
 
   /* Font Variables */
   --primary-font: "Inter", "sans-serif";
   --secondary-font: "Plus Jakarta Sans", "sans-serif";
+  --third-font: "SF Pro Display Web", sans-serif;
 
   /* Font Sizes */
   --font-size-logo: 25px;
   --font-size-medium: 18px;
+  --font-size-stats: 34px;
   --font-size-large: 24px;
   --font-size-large-content: 20px;
   --font-size-base: 16px;

@@ -8,6 +8,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
-    <script src="./../../js/main.js"></script>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <div>
+            <a href="/pages/homePage/index.html" class="nav-logo">UpConslt</a>
+          </div>
+          <div>
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="/pages/services/index.html" class="nav-link active"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/pages/pricing/index.html" class="nav-link">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a href="/pages/blog/index.html" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="/pages/login/index.html" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item">
+                <button class="nav-menu-navbar-right">Get Started</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-right">
+          <button>Get Started</button>
+        </div>
+
+        <div class="hamburger">
+          <button class="hamburger-button">
+            <i class="fa-solid fa-bars hamburger-icon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h6 class="contact-top-title">Contact</h6>
+          <h2 class="contact-main-title">Let us know how we can help you</h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-content-container">
+            <div class="contact-content-text">
+              <input id="contact-input-name" type="text" placeholder="Your Name" />
+              <input id="contact-input-email" type="email" placeholder="Email" />
+            </div>
+            <div class="contact-content-message">
+              <textarea name="Message" id="contact-message" placeholder="Message"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="contact-button-box">
+          <button class="contact-button" id="contact-button">Leave us a Message</button>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./../../js/main.js"></script>
   </body>
 </html>
