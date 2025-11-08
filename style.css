@@ -812,6 +812,7 @@ tr {
 }
 .table-header-cell p {
   font-weight: 600;
+  margin-bottom: 15px;
   color: var(--black-color);
   font-size: var(--font-size-large-content);
 }
@@ -865,9 +866,7 @@ tr {
     display: contents;
   }
   .short-text {
-
     display: grid;
-
   }
   .table-header-large {
     display: none;
@@ -895,3 +894,91 @@ tr {
   }
 }
 /* Can -OC-38-17 - Implement the detailing pricing */
+/* <!-- Can-OC-44 implement the blog section start --> */
+.blog-container h3 {
+  font-size: var(--font-size-large-content);
+  color: var(--black-color);
+  font-weight: 600;
+}
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.blog-container {
+  display: grid;
+  gap: 30px;
+}
+.blog-container img {
+  width: 100%;
+}
+.blog-card {
+  display: grid;
+  gap: 15px;
+}
+.blog-card h5 {
+  color: var(--green-color);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  font-family: var(--primary-font);
+  line-height: 20px;
+}
+.blog-card h2 {
+  font-size: var(--font-size-large-content);
+  color: var(--black-color);
+  font-weight: 600;
+  line-height: 32px;
+}
+.blog-card p {
+  color: var(--gray-color);
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  font-family: var(--primary-font);
+}
+.pagination button {
+  border: none;
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}
+.next-button-image,
+.prev-button-image {
+  width: 13px !important;
+  margin-left: 10px;
+}
+.next-button,
+.prev-button {
+  color: var(--gray-color);
+}
+.active-button {
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  background-color: rgb(181, 227, 205);
+  color: var(--green-color);
+  padding: 12px;
+}
+.page-button-div {
+  display: flex;
+  gap: 2px;
+  color: var(--gray-color);
+}
+.page-button-div button {
+  padding: 12px;
+}
+
+@media (max-width: 960px) {
+  .blog-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .blog-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .page-button-div {
+    gap: 0;
+  }
+
+}
+/* <!-- Can-OC-44 implement the blog section end --> */

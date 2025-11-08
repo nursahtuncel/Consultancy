@@ -103,5 +103,196 @@
     "toggleText": "Already have an account? ",
     "toggleLinkText": "Sign in",
     "toggleTarget": "login"
-  }
+  },
+  "blog-posts": [
+    {
+      "id": 1,
+      "image": "/images/blog-section-images/blog-img-consulty-1.jpg",
+      "date": "Alec Whitten • 1 Jan 2023",
+      "title": "Bill Walsh leadership lessons",
+      "content": "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?"
+    },
+    {
+      "id": 2,
+      "image": "/images/blog-section-images/blog-img-consulty-2.jpg",
+      "date": "Demi WIlkinson • 1 Jan 2023",
+      "title": "PM mental models",
+      "content": "Mental models are simple expressions of complex processes or relationships."
+    },
+    {
+      "id": 3,
+      "image": "/images/blog-section-images/blog-img-consulty-3.jpg",
+      "date": "Natali Craig • 1 Jan 2023",
+      "title": "How collaboration makes us better designers",
+      "content": "Collaboration can make our teams stronger, and our individual designs better."
+    },
+    {
+      "id": 4,
+      "image": "/images/blog-section-images/blog-img-consulty-4.jpg",
+      "date": "Candice Wu • 1 Jan 2023",
+      "title": "What is Wireframing?",
+      "content": "Introduction to Wireframing and its Principles. Learn from the best in the industry."
+    },
+    {
+      "id": 5,
+      "image": "/images/blog-section-images/blog-img-consulty-5.jpg",
+      "date": "Drew Cano • 1 Jan 2023",
+      "title": "Importance of getting customer feedback",
+      "content": "Lorem ipsum dolor sit amet consectetur. Quis maecenas elementum platea eros."
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-4.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-1.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-3.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-6.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-1.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-2.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-3.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-5.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-4.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-1.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-5.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-4.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-3.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-6.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-2.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-1.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-4.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-5.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-6.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-1.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-2.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    },
+    {
+      "id": 6,
+      "image": "/images/blog-section-images/blog-img-consulty-3.jpg",
+      "date": "Orlando Diggs • 1 Jan 2023",
+      "title": "Podcast: Creating a better CX Community",
+      "content": "Starting a community doesn’t need to be complicated, but how do you get started?"
+    }
+  ]
 }

@@ -39,7 +39,6 @@ const createWhyUsSection = () => {
 
   renderWhyUs();
 };
-
 const createFeaturesSection = async (data) => {
   const featuresContentLeft = document.querySelector(".features-content-left");
   featuresContentLeft.innerHTML = data
@@ -163,6 +162,97 @@ const createHamburgerButton = () => {
     navMenu.classList.toggle("active");
   });
 };
+const blogPagination = async (data) => {
+  const blogList = document.querySelector(".blog-list");
+  const blogsPerPage = 6; // her sayfada 6 ürün olsun
+  let currentPage = 1; // ilk sayfa
+  const totalPage = Math.ceil(data.length / blogsPerPage); // toplam sayfa sayısını hesaplayıp kaç sayfa varsa o kadar sayfa butonu oluştur.
 
+  const showBlogs = () => {
+    blogList.innerHTML = "";
 
-export { createWhyUsSection, createFeaturesSection, createStructureCard,createHamburgerButton,createLoginSignUpForm,contactSectionLocalStorage };
+    const start = (currentPage - 1) * blogsPerPage;
+    const end = start + blogsPerPage;
+
+    for (let i = start; i < end && i < data.length; i++) {
+      const blog = data[i];
+
+      const blogCard = document.createElement("div");
+      blogCard.classList.add("blog-card");
+      blogCard.innerHTML = `
+         <img src="${blog.image}" alt="">
+            <h5>${blog.date}</h5>
+            <h2>${blog.title}</h2>
+            <p>${blog.content}</p>
+      `;
+      blogList.appendChild(blogCard);
+    }
+  };
+
+  const updatePagination = () => {
+    const pagination = document.querySelector(".pagination");
+    // Mevcut sayfalama butonlarını temizle, tekrar eklenmesin
+    pagination.innerHTML = "";
+
+    const prevButton = document.createElement("button");
+    prevButton.className = "prev-button";
+    prevButton.innerHTML = `<img class="prev-button-image" src="/images/blog-section-images/left-arrow.svg" alt=""> Previous `;
+    prevButton.disabled = currentPage === 1;
+
+    prevButton.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        showBlogs();
+        updatePagination();
+      }
+    });
+    pagination.appendChild(prevButton);
+
+    const pageButtonDiv = document.createElement("div");
+    pageButtonDiv.className = "page-button-div";
+
+    for (let i = 1; i <= totalPage; i++) {
+      const pageButton = document.createElement("button");
+      pageButton.textContent = i;
+      pageButton.classList.add("pageNumber");
+
+      if (i === currentPage) pageButton.classList.add("active-button");
+      pageButton.addEventListener("click", () => {
+        currentPage = i;
+        showBlogs();
+        updatePagination();
+      });
+      
+      pageButtonDiv.appendChild(pageButton);
+    }
+
+    pagination.appendChild(pageButtonDiv);
+
+    const nextButton = document.createElement("button");
+    nextButton.className = "next-button";
+    nextButton.innerHTML = `Next<img class="next-button-image" src="/images/blog-section-images/right-arrow.svg" alt="">  `;
+    nextButton.disabled = currentPage === totalPage;
+
+    nextButton.addEventListener("click", () => {
+      if (currentPage < totalPage) {
+        currentPage++;
+        showBlogs();
+        updatePagination();
+      }
+    });
+    pagination.appendChild(nextButton);
+  };
+
+  showBlogs();
+  updatePagination();
+};
+
+export {
+  createWhyUsSection,
+  createFeaturesSection,
+  createStructureCard,
+  createHamburgerButton,
+  createLoginSignUpForm,
+  contactSectionLocalStorage,
+  blogPagination,
+};
