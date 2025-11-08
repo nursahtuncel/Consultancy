@@ -7,6 +7,9 @@
 section {
   padding: 40px 93px;
 }
+.active {
+  color: var(--green-color) !important;
+}
 .why-us-section {
   display: grid;
   justify-content: center;
@@ -776,3 +779,119 @@ section {
 }
 
 /* miray -OC-16-17 - Implement the More Features Section end */
+/* Can -OC-38-17 - Implement the detailing pricing */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  gap: 10px;
+}
+
+tbody {
+}
+td {
+  width: 25%;
+  font-weight: 600;
+  font-size: var(--font-size-medium);
+  padding: 10px;
+}
+tr {
+  width: 100%;
+}
+
+.tic {
+  text-align: center;
+  border: 1px solid var(--black-color);
+}
+.table-header-cell {
+  gap: 20px;
+  text-align: center;
+}
+.table-header {
+  gap: 24px;
+}
+.table-header-cell p {
+  font-weight: 600;
+  color: var(--black-color);
+  font-size: var(--font-size-large-content);
+}
+.table-header-cell button {
+  border: 1px solid var(--green-color);
+  color: var(--green-color);
+  padding: 15px 28px;
+  font-weight: 600;
+}
+.table-top-left-header {
+  color: var(--green-color);
+  font-weight: 600;
+  font-size: var(--font-size-logo);
+}
+.bottom {
+  opacity: 0;
+}
+.tr-title {
+  border-top: 1px solid var(--black-color);
+  border-right: 1px solid var(--black-color);
+  border-collapse: collapse;
+}
+.tic-right {
+  border-right: none;
+}
+.tic-bottom {
+  border-bottom: none;
+}
+.table-header-small {
+  display: none;
+}
+
+.short-text {
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: none;
+  gap: 5px;
+  font-size: var(--font-size-small);
+}
+@media (max-width: 960px) {
+  thead {
+    display: none;
+  }
+  .table-header-cell {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .table-header-small {
+    display: contents;
+  }
+  .short-text {
+
+    display: grid;
+
+  }
+  .table-header-large {
+    display: none;
+  }
+  .table-header-cell {
+    font-size: 14px;
+    width: 20%;
+  }
+  .table-header {
+    gap: 12px;
+  }
+  td {
+    font-size: var(--font-size-small);
+  }
+  .table-top-left-header {
+    font-size: var(--font-size-medium);
+  }
+
+  .tic {
+    width: 20%;
+  }
+  td:first-child,
+  th:first-child {
+    width: 40%;
+  }
+}
+/* Can -OC-38-17 - Implement the detailing pricing */
