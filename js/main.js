@@ -26,14 +26,39 @@ document.addEventListener("DOMContentLoaded", async () => {
     createFeaturesSection(data);
     createHamburgerButton();
     createStructureCard(dataServices);
+    
+    const faqToggleIconOnly = document.querySelectorAll("#soru-1, #soru-3");
+    faqToggleIconOnly.forEach((button) => {
+        button.addEventListener("click", () => {
+            const icon = button.querySelector(".faq-icon");
+            if (icon) {
+                icon.classList.toggle("icon-rotated");
+            }
+        });
+    });
+    const faqToggleFull = document.querySelector("#soru-2");
+    if (faqToggleFull) { 
+        faqToggleFull.addEventListener("click", () => {
+            const icon = faqToggleFull.querySelector(".faq-icon");
+            const answer = faqToggleFull.nextElementSibling;
+            
+            if (icon) {
+                icon.classList.toggle("icon-rotated");
+            }
+            if (answer) {
+                answer.classList.toggle("hidden");
+            }
+        });
+    }
   } else if (window.location.pathname.includes("login")) {
     // login sayfasında render olacak kodlar buraya gelecek
     createLoginSignUpForm("login");
+  
   } else if (window.location.pathname.includes("pricing")) {
+  
     createHamburgerButton();
     contactSectionLocalStorage();
 
-    // pricing sayfasında render olacak kodlar buraya gelecek
   } else if (window.location.pathname.includes("signup")) {
     // signUp sayfasında render olacak kodlar buraya gelecek
     createLoginSignUpForm("signup");
