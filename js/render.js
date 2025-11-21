@@ -247,6 +247,43 @@ const blogPagination = async (data) => {
   updatePagination();
 };
 
+const createFaqSection = async () => {
+  const faqs = await fetchData("faqs");
+  const faqList = document.querySelector(".faq-list");
+
+  if (!faqList || !faqs) return;
+
+  faqList.innerHTML = "";
+
+  faqs.forEach((faq) => {
+    const faqItem = document.createElement("div");
+    faqItem.classList.add("faq-item");
+
+    faqItem.innerHTML = `
+        <button class="faq-question">
+            <span class="faq-question-text">${faq.question}</span>
+            <span class="faq-icon">
+                <img src="../../images/faq-section/arrow1.svg" alt="ikon">
+            </span>
+        </button>
+        <div class="faq-answer hidden">
+            <p>${faq.answer}</p>
+        </div>
+    `;
+
+    faqList.appendChild(faqItem);
+
+    const questionBtn = faqItem.querySelector(".faq-question");
+    const answerDiv = faqItem.querySelector(".faq-answer");
+    const icon = faqItem.querySelector(".faq-icon");
+
+    questionBtn.addEventListener("click", () => {
+        answerDiv.classList.toggle("hidden");
+        answerDiv.classList.toggle("faq-answer-highlight");
+        icon.classList.toggle("icon-rotated");
+    });
+  });
+}
 export {
   createWhyUsSection,
   createFeaturesSection,
@@ -255,4 +292,5 @@ export {
   createLoginSignUpForm,
   contactSectionLocalStorage,
   blogPagination,
+  createFaqSection,
 };
