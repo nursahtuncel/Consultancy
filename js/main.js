@@ -31,23 +31,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   } else if (window.location.pathname.includes("login")) {
     // login sayfasında render olacak kodlar buraya gelecek
     createLoginSignUpForm("login");
+
+
+
   } else if (window.location.pathname.includes("pricing")) {
     createHamburgerButton();
     contactSectionLocalStorage();
-
     // pricing sayfasında render olacak kodlar buraya gelecek
-    (async () => {
-        try {
-            console.log("Pricing verileri yükleniyor...");
-            const data = await fetchData(); 
-            
-            if (data) {
-                createPricingSection(data); 
-            }
-        } catch (error) {
-            console.error("Pricing yüklenirken hata:", error);
-        }
-    })();
+    const pricing = await fetchData("pricing");
+    createPricingSection(pricing)
+  
+     
 
 
 
