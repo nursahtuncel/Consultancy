@@ -222,7 +222,7 @@ const blogPagination = async (data) => {
         showBlogs();
         updatePagination();
       });
-      
+
       pageButtonDiv.appendChild(pageButton);
     }
 
@@ -245,6 +245,58 @@ const blogPagination = async (data) => {
 
   showBlogs();
   updatePagination();
+};
+const createBlogSection = async (blogs) => {
+  const container = document.querySelector(".blog-post-card");
+  if (!container) return;
+  container.innerHTML = blogs
+    .map(
+      (blog) => `
+        <div class="blog-card-post">
+          <div class="blog-card-image">
+            <img src="${blog.image}" alt="${blog.title}">
+          </div>
+          <div class="blog-card-content">
+            <h4>${blog.date}</h4>
+            <h2>${blog.title}</h2>
+            <p>${blog.content}</p>
+          </div>
+        </div>`
+    )
+    .join("");
+};
+ 
+
+
+
+
+ const createPricingSection = (data) => {
+    const section = document.getElementById('pricing-section');
+
+    const cardsHTML = data.map(item => {
+        
+        const featuresHTML = item.features.map(feature => 
+            `<p>${feature}</p>`
+        ).join('');
+
+      
+        return `
+            <div class="pricing-card">
+                <h3 class="card-title">${item.title}</h3>
+                <div class="price-wrapper">
+                    <span class="price-amount">${item.price}</span>
+                    <span class="price-period">/mth</span>
+                </div>
+                <p class="card-description">${item.description}</p>
+                <div class="feature-list">
+                    ${featuresHTML}
+                </div>
+                <button class="card-btn">${item.buttonText}</button>
+            </div>
+        `;
+    }).join(''); 
+
+    section.innerHTML = `<div class="pricing-container">${cardsHTML}</div>`;
 };
 
 const createFaqSection = async (faqs) => {
@@ -296,6 +348,8 @@ const createFaqSection = async (faqs) => {
   faqsSection.appendChild(faqList);
   document.body.appendChild(faqsSection);
 }
+
+
 export {
   createWhyUsSection,
   createFeaturesSection,
@@ -304,5 +358,7 @@ export {
   createLoginSignUpForm,
   contactSectionLocalStorage,
   blogPagination,
+  createBlogSection,
+  createPricingSection,
   createFaqSection,
 };

@@ -114,7 +114,7 @@ section {
 }
 .features-content-right img {
   width: 100%;
-
+  border-radius: 8px;
   object-fit: cover;
   max-height: 600px;
 }
@@ -212,7 +212,7 @@ section {
   border: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .navbar {
     padding: 40px 24px;
   }
@@ -673,29 +673,23 @@ section {
 
 .m-container {
   display: flex;
-  max-width: 1181px;
-  margin: 50px auto;
-  padding-left: 20px;
-  background-color: var(--white-color);
 }
 
 .m-left {
-  max-width: 553px;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
+  width: 55%;
+  max-height: 555px;
 }
 
 .m-left img {
   width: 100%;
   height: 100%;
-  padding: 20px;
   display: block;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .m-right {
-  max-width: 553px;
+  width: 45%;
   padding: 40px 20px 40px 40px;
   display: flex;
   flex-direction: column;
@@ -748,12 +742,12 @@ section {
   .m-container {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    display: grid;
   }
 
   .m-left,
   .m-right {
-    flex: 1 1 100%;
+    width: 100%;
   }
 
   .m-right {
@@ -787,7 +781,6 @@ table {
   border-collapse: collapse;
   gap: 10px;
 }
-
 
 td {
   width: 25%;
@@ -979,9 +972,101 @@ tr {
   .page-button-div {
     gap: 0;
   }
-
 }
 /* <!-- Can-OC-44 implement the blog section end --> */
+
+/* <!-- Can-OC-41 implement the blog post section Start --> */
+.blog-post-container {
+  display: grid;
+  gap: 61px;
+}
+.blog-post-header {
+  display: grid;
+  gap: 21px;
+  text-align: center;
+}
+.blog-post-header h5 {
+  color: var(--green-color);
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+  font-family: var(--primary-font);
+}
+.blog-post-header h1 {
+  color: var(--black-color);
+  font-size: var(--font-size-medium-header);
+  font-weight: 600;
+}
+.blog-post-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.blog-card-post {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.blog-card-post .blog-card-image {
+  flex-basis: 50%;
+}
+.blog-card-post .blog-card-image img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+.blog-card-post .blog-card-content {
+  display: grid;
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.blog-card-content h4 {
+  color: var(--green-color);
+  font-family: var(--primary-font);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+}
+.blog-card-content h2 {
+  font-weight: 600;
+  color: var(--black-color);
+  font-size: var(--font-size-large-content);
+}
+
+.blog-card-content p {
+  font-size: var(--font-size-base);
+  color: var(--gray-color);
+  font-weight: 400;
+}
+.blog-post-cards {
+  display: grid;
+  gap: 20px;
+}
+.blog-post-cards h3 {
+  font-weight: 600;
+  font-size: var(--font-size-large-content);
+  color: var(--black-color);
+}
+@media (max-width: 960px) {
+  .blog-post-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog-post-container {
+    gap: 40px;
+  }
+  @media (max-width: 500px) {
+    .blog-card-post {
+      flex-direction: column;
+    }
+    .blog-card-content {
+      gap: 10px;
+    }
+  }
+}
+/* <!-- Can-OC-41 implement the blog post section end --> */
+
 
 /* esra-23-FAQ-section-start*/
 .hidden {
@@ -1110,3 +1195,116 @@ tr {
 }
 
 /* esra-23-FAQ-section-end*/
+
+/* ceren pricing section start */
+
+.pricing-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.pricing-card {
+    max-width: 370px;
+    width:100%;
+    min-height: 408px;
+    background: var(--white-color); 
+    border: 1px solid #DFE1E7; 
+    border-radius: 8px;
+    
+    padding-top: 30px;
+    padding-right: 35px;
+    padding-bottom: 45px;
+    padding-left: 32px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card-title {
+    color: var(--green-color);
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: var(--font-size-base); 
+    line-height: 100%;
+    margin-bottom: 15px;
+}
+
+.price-wrapper {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.price-amount {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: var(--font-size-medium-header);
+    color: var(--black-color);
+    line-height: 100%;
+}
+
+.price-period {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: var(--font-size-large-content); 
+    color: var(--black-color);
+    line-height: 100%;
+}
+
+.card-description {
+    width: 100%;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: var(--font-size-base);
+    line-height: 24px;
+    text-align: center;
+    color: var(--gray-color); 
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: auto;
+    color: var(--black-color);
+}
+
+.feature-list p {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: var(--font-size-base); 
+    line-height: 24px;
+    text-align: center;
+}
+
+.card-btn {
+    max-width: 301px;
+    width: 100%;
+    height: 49px;
+    background: var(--green-color);
+    border: none;
+    border-radius: 8px;
+    
+    color: var(--white-color);
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: var(--font-size-base); 
+    cursor: pointer;
+    
+    padding: 15px 28px;
+    transition: opacity 0.3s;
+}
+
+.card-btn:hover {
+    opacity: 0.9;
+}
+/* ceren pricing section end */
+
