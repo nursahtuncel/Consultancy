@@ -349,6 +349,39 @@ const createFaqSection = async (faqs) => {
   document.body.appendChild(faqsSection);
 }
 
+const createContactSection = () => {
+document.createElement("section");
+const contactSection = document.createElement("section");
+contactSection.innerHTML = `<div class="container">
+        <div class="contact-header">
+            <span class="sub-title">Contact Info</span>
+            <h2 class="main-title">We are always happy to assist you</h2>
+        </div>
+
+        <div class="contact-info-grid">
+            
+            <div class="info-box">
+                <h3 class="info-label">Email Address</h3>
+                <div class="line"></div> <a href="mailto:help@info.com" class="info-value">help@info.com</a>
+                <div class="info-hours">
+                    <p>Assistance hours:</p>
+                    <p>Monday - Friday 6 am to 8 pm EST</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 class="info-label">Number</h3>
+                <div class="line"></div> <a href="tel:80899834256" class="info-value">(808) 998-34256</a>
+                <div class="info-hours">
+                    <p>Assistance hours:</p>
+                    <p>Monday - Friday 6 am to 8 pm EST</p>
+                </div>
+            </div>
+
+        </div>
+    </div>`
+document.body.appendChild(contactSection);
+} 
 
 export {
   createWhyUsSection,
@@ -361,4 +394,5 @@ export {
   createBlogSection,
   createPricingSection,
   createFaqSection,
+  createContactSection,
 };
