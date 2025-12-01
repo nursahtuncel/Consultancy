@@ -362,7 +362,7 @@ contactSection.innerHTML = `<div class="container">
             
             <div class="info-box">
                 <h3 class="info-label">Email Address</h3>
-                <div class="separator"></div> <a href="mailto:help@info.com" class="info-value">help@info.com</a>
+                <div class="line"></div> <a href="mailto:help@info.com" class="info-value">help@info.com</a>
                 <div class="info-hours">
                     <p>Assistance hours:</p>
                     <p>Monday - Friday 6 am to 8 pm EST</p>
