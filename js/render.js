@@ -348,7 +348,60 @@ const createFaqSection = async (faqs) => {
   faqsSection.appendChild(faqList);
   document.body.appendChild(faqsSection);
 }
+const createFooterSection = () => {
+  document.createElement("section");
+  const footerSection =document.createElement("section");
+  footerSection.innerHTML = `<div class="container">
+      
+      <div class="footer-content">
+        
+        <div class="footer-brand">
+          <h2 class="footer-logo">UpConslt</h2>
+          <p class="footer-desc">
+            We are the best business consulting services that have been operating for more than 20 years, handling many well-known brands
+          </p>
+        </div>
 
+        <div class="footer-links">
+          
+          <div class="link-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Business Start-up</a></li>
+              <li><a href="#">Small Business</a></li>
+              <li><a href="#">Digital Business</a></li>
+            </ul>
+          </div>
+
+          <div class="link-column">
+            <h3>Info</h3>
+            <ul>
+              <li><a href="#">Client</a></li>
+              <li><a href="#">Event</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="link-column">
+            <h3>Contact</h3>
+            <ul>
+              <li>South Jakarta - Indonesia</li>
+              <li>+0628-2267-9981</li>
+              <li>contact@upconslt.com</li>
+            </ul>
+          </div>
+          
+          </div>
+      </div> 
+
+      <div class="footer-bottom">
+        <p>&copy; 2022 <span class="highlight">UpConslt.</span> All rights reserved.</p>
+      </div>
+
+    </div>
+  `;
+  document.body.appendChild(footerSection);
+}
 const createContactSection = () => {
 document.createElement("section");
 const contactSection = document.createElement("section");
@@ -379,7 +432,7 @@ contactSection.innerHTML = `<div class="container">
             </div>
 
         </div>
-    </div>`
+    </div>`;
 document.body.appendChild(contactSection);
 } 
 
@@ -395,4 +448,5 @@ export {
   createPricingSection,
   createFaqSection,
   createContactSection,
+  createFooterSection
 };

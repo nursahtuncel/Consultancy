@@ -12,6 +12,7 @@ import {
   createPricingSection,
   createFaqSection,
   createContactSection,
+  createFooterSection,
 } from "./render.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -34,10 +35,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     createFaqSection(faqs);
     createContactSection();
+    createFooterSection();
     
   } else if (window.location.pathname.includes("login")) {
     // login sayfasında render olacak kodlar buraya gelecek
     createLoginSignUpForm("login");
+    
 
 
 
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     createPricingSection(pricing)
     createFaqSection(faqs);
     createContactSection();
+    createFooterSection();
 
   } else if (window.location.pathname.includes("signup")) {
     // signUp sayfasında render olacak kodlar buraya gelecek
@@ -61,6 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     blogPagination(data);
     createBlogSection(blogs)
     createContactSection();
+    createFooterSection();
     // blog sayfasında render olacak kodlar buraya gelecek
   } else if (window.location.pathname.includes("services")) {
     createFaqSection(faqs);
@@ -68,5 +73,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     createHamburgerButton();
     contactSectionLocalStorage();
     createContactSection();
+    createFooterSection();
   }
 });
