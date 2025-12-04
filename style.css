@@ -1322,7 +1322,6 @@ tr {
     width: 100%;
     display: flex;
     flex-direction: column; 
-    gap: 40px;
 }
 
 .contact-header {
@@ -1410,11 +1409,6 @@ tr {
 }
 
 @media (min-width: 768px) {
-    .container {
-        flex-direction: row; 
-        justify-content: space-between; 
-        align-items: flex-start;
-    }
 
     .contact-header {
         flex: 1; 
@@ -1445,7 +1439,7 @@ tr {
     color: #555;
 }
 
-.container {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -1487,11 +1481,10 @@ tr {
     color: #787878; 
 }
 .footer-links {
-    flex: 2;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;    
+    gap: 50px;    
     font-family: 'Plus Jakarta Sans', sans-serif;
     transition: color 0.3s ease;
     cursor: pointer;
@@ -1580,5 +1573,9 @@ tr {
         justify-content: space-between;
     }
 }
-
+@media (max-width: 566px){
+  .footer-links{
+    flex-direction: column;
+  }
+}
 /* esra footer section end */

@@ -351,7 +351,7 @@ const createFaqSection = async (faqs) => {
 const createFooterSection = () => {
   document.createElement("section");
   const footerSection =document.createElement("section");
-  footerSection.innerHTML = `<div class="container">
+  footerSection.innerHTML = `<div class="footer-container">
       
       <div class="footer-content">
         
