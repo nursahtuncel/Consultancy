@@ -1,4 +1,5 @@
 import fetchData from "./fetch.js";
+import { saveEmailToLocalStorage } from "./localstorage.js";
 
 const createWhyUsSection = () => {
   async function renderWhyUs() {
@@ -318,7 +319,28 @@ const createNewsletterSection = () => {
         </div>
     `;
     document.body.appendChild(section);
+    
+  const forms = section.querySelectorAll('.newsletter-form');
+
+  forms.forEach(form => {
+      form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          const input = form.querySelector('.newsletter-input');
+          const email = input.value.trim();
+
+          const result = saveEmailToLocalStorage(email);
+
+          alert(result.message);
+
+          if (result.success) {
+              input.value = "";
+          }
+      });
+  });
 };
+
+
 
 
 export {
