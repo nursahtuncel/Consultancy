@@ -436,6 +436,92 @@ contactSection.innerHTML = `<div class="container">
 document.body.appendChild(contactSection);
 } 
 
+//esra detailed services section start
+
+const createDetailedServicesSection = () => {
+  const servicesData = [
+    {
+      title: "Fast workmanship, precise consultation",
+      desc: "Defines our commitment to delivering tailored, high-quality business solutions with speed and accuracy. Through streamlined processes, expert teams, and data-driven strategies, we ensure rapid execution without compromising precision. Our customized, actionable insights help businesses make swift, confident decisions, driving measurable results and long-term success in an ever-changing market.",
+      icon: "../../images/detailed-services/icon-1.svg",
+      image: "../../images/detailed-services/service-img-1.svg"
+    },
+    {
+      title: "Lower prices with lots of variety",
+      desc: "Reflects our dedication to offering affordable solutions without compromising on choice. We provide a wide range of options tailored to diverse needs, ensuring quality and value at competitive prices. Whether you're looking for specific solutions or exploring new opportunities, our extensive selection guarantees satisfaction while keeping costs low.",
+      icon: "../../images/detailed-services/icon-2.svg",
+      image: "../../images/detailed-services/service-img-2.svg"
+    },
+    {
+      title: "Detailed analysis of sales graph data",
+      desc: "Highlights our expertise in transforming complex sales data into clear, actionable insights. By thoroughly analyzing sales trends, patterns, and performance metrics, we help businesses identify opportunities, optimize strategies, and drive growth with data-backed decisions.",
+      icon: "../../images/detailed-services/icon-3.svg",
+      image: "../../images/detailed-services/service-img-3.svg"
+    },
+    {
+      title: "Management and strategy consultant",
+      desc: "Offers expert guidance to optimize business operations and drive sustainable growth. Through tailored strategies and effective management solutions, we help organizations overcome challenges, streamline processes, and achieve their long-term goals with confidence and precision.",
+      icon: "../../images/detailed-services/icon-4.svg",
+      image: "../../images/detailed-services/service-img-4.svg"
+    },
+    {
+      title: "Communicative with ease of discussion",
+      desc: "Reflects our commitment to open, clear, and effective communication, fostering an environment where ideas and feedback flow effortlessly. We prioritize active listening and collaboration to ensure discussions are productive, seamless, and tailored to your needs.",
+      icon: "../../images/detailed-services/icon-5.svg",
+      image: "../../images/detailed-services/service-img-5.svg"
+    },
+    {
+      title: "Open for feedback and review",
+      desc: "emphasizes our commitment to continuous improvement and collaboration. We value client input, encourage open dialogue, and remain flexible to refine solutions, ensuring outcomes align perfectly with your goals and expectations.",
+      icon: "../../images/detailed-services/icon-6.svg",
+      image: "../../images/detailed-services/service-img-6.svg"
+    }
+  ];
+  const section = document.createElement("section");
+  section.classList.add("detailed-services-section");
+
+    const topTitle = document.createElement("span");
+    topTitle.classList.add("section-top-title");
+    topTitle.innerText = "SERVICES";
+    section.appendChild(topTitle); 
+
+  
+    const mainTitle = document.createElement("h2");
+    mainTitle.classList.add("section-main-title");
+    mainTitle.innerHTML = "How Can Our Best Services Help<br>Your Business?";
+    section.appendChild(mainTitle);
+
+  const container = document.createElement("div");
+  container.classList.add("services-container");
+
+  servicesData.forEach((item, index) => {
+    const serviceRow = document.createElement("div");
+    serviceRow.classList.add("service-row");
+
+    if (index % 2 !== 0) {
+      serviceRow.classList.add("row-reverse");
+    }
+
+    serviceRow.innerHTML = `
+        <div class="service-text-content">
+            <div class="service-header">
+                <img src="${item.icon}" alt="icon" class="service-icon">
+                <h3>${item.title}</h3>
+            </div>
+            <p>${item.desc}</p>
+        </div>
+        <div class="service-image-content">
+            <img src="${item.image}" alt="${item.title}">
+        </div>
+    `;
+
+    container.appendChild(serviceRow);
+  });
+
+  section.appendChild(container);
+  return section;
+};
+
 export {
   createWhyUsSection,
   createFeaturesSection,
@@ -448,5 +534,6 @@ export {
   createPricingSection,
   createFaqSection,
   createContactSection,
-  createFooterSection
+  createFooterSection,
+  createDetailedServicesSection
 };

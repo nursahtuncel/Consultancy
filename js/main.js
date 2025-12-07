@@ -13,6 +13,7 @@ import {
   createFaqSection,
   createContactSection,
   createFooterSection,
+  createDetailedServicesSection,
 } from "./render.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -68,11 +69,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     createFooterSection();
     // blog sayfasında render olacak kodlar buraya gelecek
   } else if (window.location.pathname.includes("services")) {
-    createFaqSection(faqs);
-    // services sayfasında render olacak kodlar buraya gelecek
+    
+    const detailedServicesElement = createDetailedServicesSection();
+    
+    if (detailedServicesElement) {
+        document.body.appendChild(detailedServicesElement);
+    }
+
+
     createHamburgerButton();
     contactSectionLocalStorage();
+    createFaqSection(faqs);
     createContactSection();
     createFooterSection();
+    createDetailedServicesSection()
+  
   }
 });
