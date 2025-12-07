@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // pricing sayfasında render olacak kodlar buraya gelecek
     const pricing = await fetchData("pricing");
     createPricingSection(pricing)
+    createNewsletterSection();
     createFaqSection(faqs);
     createContactSection();
 

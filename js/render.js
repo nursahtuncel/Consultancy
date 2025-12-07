@@ -299,7 +299,7 @@ const createBlogSection = async (blogs) => {
     section.innerHTML = `<div class="pricing-container">${cardsHTML}</div>`;
 };
 const createNewsletterSection = () => {
-  const section = document.createElement("section");
+  const section = document.createElement("div");
   section.innerHTML = 
   `
         <div class="newsletter-container">
