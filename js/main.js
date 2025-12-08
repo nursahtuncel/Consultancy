@@ -69,20 +69,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     createFooterSection();
     // blog sayfasında render olacak kodlar buraya gelecek
   } else if (window.location.pathname.includes("services")) {
-    
-    const detailedServicesElement = createDetailedServicesSection();
-    
-    if (detailedServicesElement) {
-        document.body.appendChild(detailedServicesElement);
-    }
 
-
+    createDetailedServicesSection();
     createHamburgerButton();
     contactSectionLocalStorage();
     createFaqSection(faqs);
     createContactSection();
     createFooterSection();
-    createDetailedServicesSection()
-  
   }
 });

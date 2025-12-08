@@ -516,10 +516,10 @@ const createDetailedServicesSection = () => {
     `;
 
     container.appendChild(serviceRow);
+    document.body.appendChild(section);
   });
 
   section.appendChild(container);
-  return section;
 };
 
 export {

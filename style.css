@@ -1543,13 +1543,11 @@ tr {
 }
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
     font-size: 14px;
     color: #999;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 25px;
-    margin-top: 20px;
 }
 
 .footer-bottom .highlight {
