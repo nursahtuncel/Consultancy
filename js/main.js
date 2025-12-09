@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       alert("Buton Tıklandı");
     });
   }
-  if (window.location.pathname.includes("index")) {
+  if (window.location.pathname.includes("index") || window.location.pathname === "/" || window.location.pathname === "/consultancyyyy") {
     const data = await fetchData("feature-section");
     const dataServices = await fetchData("services-card");
     createWhyUsSection();
