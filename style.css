@@ -584,6 +584,9 @@ section {
 
 /* <!-- OC-32-implement-Contact Section Start --> */
 .contact-container {
+  margin: auto;
+  max-width: 1440px;
+  width: 100%;
   gap: 60px;
   display: grid;
 }
@@ -1441,9 +1444,9 @@ tr {
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+   
 }
 
 .footer-content {
@@ -1588,12 +1591,17 @@ tr {
     justify-content: center;
   
 }
-
+.nevsLetter-section{
+  width: 100%;
+background: var(--green-color);
+}
 .newsletter-container {
+  margin: auto;
+    max-width: 1440px;
     width: 100%;
     background: var(--green-color);
     gap: 80px;
-    padding: 100px 120px;
+    padding: 100px 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1735,3 +1743,165 @@ tr {
     }
 }
 /* ceren newsletter section end */
+/*esra detailed services start */
+
+.detailed-services-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.section-top-title {
+    font-family: 'Inter', sans-serif;
+    color: #26BB74;
+    font-size: 18px;
+    font-weight: 500; 
+    display: block; 
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.section-top-title:hover {
+    color: #14613d; 
+}
+
+.section-main-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 60px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.section-main-title:hover {
+    color: #555; 
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.service-row.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.service-text-content {
+    flex: 1;
+    font-weight: 400;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.service-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 40px; 
+}
+
+.service-text-content h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.service-text-content h3:hover {
+    color: #555; 
+}
+
+.service-text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6c757d;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.service-text-content p:hover {
+    color: #000000; 
+}
+
+.service-image-content {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.service-image-content img {
+    max-width: 480px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: block;
+    max-height: 300px;
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+}
+
+.service-image-content img:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+@media (max-width: 768px) {
+
+    .section-main-title {
+        font-size: 2rem;
+        text-align: left;
+        max-width: 100%;
+    }
+    .service-row {
+        flex-direction: column-reverse ;
+        gap: 20px;
+        text-align: left; 
+    }
+
+    .service-row.row-reverse {
+        flex-direction: column-reverse;
+    }
+    .service-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+        width: 100%;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    .service-image-content {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .service-image-content img {
+        width: 100% ; 
+        max-width: none;
+        height: 300px; 
+        border-radius: 8px;
+        object-fit: cover; 
+    }
+    
+}
+
+/*esra detailed services end*/
+

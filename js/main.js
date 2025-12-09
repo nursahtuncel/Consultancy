@@ -1,6 +1,7 @@
 import fetchData from "./fetch.js";
 
 import {
+  createDetailedServicesSection,
   createWhyUsSection,
   createFeaturesSection,
   createStructureCard,
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       alert("Buton Tıklandı");
     });
   }
-  if (window.location.pathname.includes("home")) {
+  if (window.location.pathname.includes("index")) {
     const data = await fetchData("feature-section");
     const dataServices = await fetchData("services-card");
     createWhyUsSection();
@@ -41,43 +42,40 @@ document.addEventListener("DOMContentLoaded", async () => {
   } else if (window.location.pathname.includes("login")) {
     // login sayfasında render olacak kodlar buraya gelecek
     createLoginSignUpForm("login");
-    
-
-
-
-
   } else if (window.location.pathname.includes("pricing")) {
-  
     createHamburgerButton();
     contactSectionLocalStorage();
     // pricing sayfasında render olacak kodlar buraya gelecek
     const pricing = await fetchData("pricing");
-    createPricingSection(pricing)
-    createNewsletterSection();
+    createPricingSection(pricing);
+
     createFaqSection(faqs);
     createContactSection();
+    createNewsletterSection();
     createFooterSection();
-
   } else if (window.location.pathname.includes("signup")) {
     // signUp sayfasında render olacak kodlar buraya gelecek
     createLoginSignUpForm("signup");
   } else if (window.location.pathname.includes("blog")) {
     const data = await fetchData("blog-posts");
-    const blogs =await fetchData("blog-post-cards")
+    const blogs = await fetchData("blog-post-cards");
     createHamburgerButton();
     blogPagination(data);
-    createBlogSection(blogs)
+    createBlogSection(blogs);
     createContactSection();
+        createNewsletterSection();
     createFooterSection();
     // blog sayfasında render olacak kodlar buraya gelecek
   } else if (window.location.pathname.includes("services")) {
-    createFaqSection(faqs);
+    
+    createDetailedServicesSection();
+  
     // services sayfasında render olacak kodlar buraya gelecek
     createHamburgerButton();
     contactSectionLocalStorage();
-    createNewsletterSection();
+     createFaqSection(faqs);
     createContactSection();
+     createNewsletterSection();
     createFooterSection();
-    
   }
 });
