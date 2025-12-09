@@ -1,1 +1,11 @@
-https://www.figma.com/design/omJ0h3jcpoVbtLxfGpmSwd/UpConsultancy?node-id=0-1&p=f&t=Cj48cqhYp7ta9UeR-0
+# Consultancy
+Consultancy — basit, statik bir web sitesi / landing-page / portföy sitesi / danışmanlık sitesi projesidir. Bu proje, frontend (HTML / CSS / JS) kullanılarak hazırlanmıştır ve temel olarak bir firma/kuruluş için web varlığı oluşturmayı amaçlar.
+
+## 🚀 Canlı Demo  
+Projenin canlı versiyonuna buradan ulaşabilirsiniz:  
+[consultancyyyy.netlify.app](https://consultancyyyy.netlify.app)
+
+## 🧰 Teknolojiler / Yapı  
+- HTML 
+- CSS 
+- JavaScript 
